@@ -1,0 +1,143 @@
+.btn {
+  background: $dark-color;
+  color: $light-color;
+  padding: 0.6rem 1.3rem;
+  border-radius: 5px;
+  border: 0;
+}
+
+// navigation
+.main-nav {
+  text-align: center;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    li {
+      a {
+        display: block;
+        background: $primary-color;
+        color: $dark-color;
+        font-size: 1.1rem;
+        padding: 0.8rem;
+        text-transform: uppercase;
+        box-shadow: $shadow-color;
+
+        &:hover {
+          background: $dark-color;
+          color: $light-color;
+        }
+      }
+    }
+  }
+}
+
+// top-container
+.top-container {
+  display: grid;
+  grid-template-areas:
+    "showcase showcase top-box-a"
+    "showcase showcase top-box-b";
+  gap: 20px;
+
+  .showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url("/image/showcase.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: $shadow-color;
+
+    h1 {
+      font-size: 4rem;
+      color: $light-color;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: $light-color;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .top-box {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: $primary-color;
+    padding: 1.5rem;
+    box-shadow: $shadow-color;
+
+    .price {
+      font-size: 2.5rem;
+    }
+  }
+
+  .top-box-a {
+    grid-area: top-box-a;
+  }
+
+  .top-box-b {
+    grid-area: top-box-b;
+  }
+}
+
+// box
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+  .box {
+    background: $primary-color;
+    box-shadow: $shadow-color;
+    text-align: center;
+    padding: 1.5rem 2rem;
+
+    h3 {
+      margin: 1rem 0;
+    }
+  }
+}
+
+// info
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 3rem;
+  background: $primary-color;
+  box-shadow: $shadow-color;
+
+  p {
+    margin: 1rem 0;
+  }
+}
+
+// portfolio
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+  img {
+    box-shadow: $shadow-color;
+  }
+}
+
+// footer
+.footer {
+  background: $dark-color;
+  color: $light-color;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
